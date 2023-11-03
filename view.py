@@ -17,7 +17,7 @@ class GUI(QMainWindow):
 
         # Set some main window's properties
         self.setWindowTitle('Calculator')
-        self.setFixedSize(235, 235)
+        self.setFixedSize(450, 450)
 
         # Set the central widget and the general layout
         self.generalLayout = QVBoxLayout()
@@ -69,11 +69,14 @@ class GUI(QMainWindow):
                    '.': (3, 2),
                    '+': (3, 3),
                    '=': (3, 4),
+                   'b to B': (4,0),
+                   'B to kb': (4,1),
+                   'kb to Mb':(4,2)
                   }
         # Create the buttons and add them to the grid layout
         for btnText, pos in buttons.items():
             self.buttons[btnText] = QPushButton(btnText)
-            self.buttons[btnText].setFixedSize(40, 40)
+            self.buttons[btnText].setFixedSize(80, 80)
             buttonsLayout.addWidget(self.buttons[btnText], pos[0], pos[1])
         # Add buttonsLayout to the general layout
         self.generalLayout.addLayout(buttonsLayout)
