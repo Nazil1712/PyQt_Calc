@@ -17,7 +17,7 @@ class GUI(QMainWindow):
 
         # Set some main window's properties
         self.setWindowTitle('Calculator')
-        self.setFixedSize(450, 450)
+        self.setFixedSize(500, 500)
 
         # Set the central widget and the general layout
         self.generalLayout = QVBoxLayout()
